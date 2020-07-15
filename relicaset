@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: kybi
+  labels:
+    app: guestbook
+    tier: kybi
+spec:
+  # modify replicas according to your case
+  replicas: 5
+  selector:
+    matchLabels:
+      tier: kybi
+  template:
+    metadata:
+      labels:
+        tier: kybi
+    spec:
+      containers:
+      - name: php-redis
+        image: mysql
