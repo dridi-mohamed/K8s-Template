@@ -19,3 +19,8 @@ spec:
       containers:
       - name: php-redis
         image: mysql
+
+
+# kubectl scale --replicas=15 replicaset/kybi
+# kubectl get pod
+# kubectl delete replicase
