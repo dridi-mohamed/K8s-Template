@@ -1,0 +1,34 @@
+
+(  ____ )|\     /|( (    /|        (  __  \ (  ____ \(  ____ )( \      (  ___  )|\     /|(       )(  ____ \( (    /|\__   __/
+| (    )|| )   ( ||  \  ( |        | (  \  )| (    \/| (    )|| (      | (   ) |( \   / )| () () || (    \/|  \  ( |   ) (   
+| (____)|| |   | ||   \ | |        | |   ) || (__    | (____)|| |      | |   | | \ (_) / | || || || (__    |   \ | |   | |   
+|     __)| |   | || (\ \) |        | |   | ||  __)   |  _____)| |      | |   | |  \   /  | |(_)| ||  __)   | (\ \) |   | |   
+| (\ (   | |   | || | \   |        | |   ) || (      | (      | |      | |   | |   ) (   | |   | || (      | | \   |   | |   
+| ) \ \__| (___) || )  \  |        | (__/  )| (____/\| )      | (____/\| (___) |   | |   | )   ( || (____/\| )  \  |   | |   
+|/   \__/(_______)|/    )_)        (______/ (_______/|/       (_______/(_______)   \_/   |/     \|(_______/|/    )_)   )_(   
+                                                                                                                             
+
+
+
+
+# Run Dep firts Time
+kubectl create -f dep.yml
+
+# check dep
+kubectl get all
+kubectl deploy
+kubectl get deployment -o wide
+kubectl get pod
+
+# Rollout to old version 
+kubectl rellout -h 
+
+1- check what goin one 
+kubectl rellout status
+
+2- check history list of your rollback 
+ kubectl rollout history  deploy myapp
+
+# Roll-back One Step Back 
+kubectl rollout undo  deploy myapp --to-revision=1
+
