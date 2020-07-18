@@ -1,0 +1,50 @@
+All containers connect to each other 
+
+when containers dead  k8s create new containers withe new IP new name  and name
+
+ ! Problem lose and  change in IP and  name.
+
+K8s Service Solved this problem. 
+
+Or use cin "container network interface "product like
+calico and  vm 
+
+k8s use core dns to discovery service and check  all update and tall you about new name and IP
+
+
+SERVICE 
+
+service = name + IP
+
+Fix IP name for pods create 
+
+IP and name =⇾ storage core Dns 
+
+the 3 type of service : 
+
+1cluster IP
+create connection internal 
+pod ping pod in same cluster 
+
+2nodePoret
+use IP host + port  to connect pod to the external world 
+172.1.1.1:4040
+Dangers because throat in security " file security"
+
+The user can not know how use the port 
+
+"name website"
+
+
+
+3 lo balance 
+ use simple not  The need to create port
+
+Tools and software 
+nginx loadable 
+cloud azure aws 
+
+use INGRESS NETWORK
+
+control combination between pods with service 
+ create Roles if have 172.16.12.1
