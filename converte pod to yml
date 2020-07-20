@@ -1,0 +1,1 @@
+ kubectl get deploy -n depweb nginx -o yaml > f1.txt
